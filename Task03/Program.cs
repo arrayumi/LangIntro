@@ -1,7 +1,7 @@
 ﻿Console.Write("Введите целое число от 1 до 7: ");
 int number = Convert.ToInt32 (Console.ReadLine());
 
-if ( number < 8 )
+if ( number < 8 && number > 1 )
 {
    if (number == 1)
    {
