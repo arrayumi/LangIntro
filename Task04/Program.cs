@@ -24,4 +24,4 @@ else
 {
     numMax = a;
 }
-Console.Write(numMax);
+Console.Write($"{numMax} - максимальное число.");
