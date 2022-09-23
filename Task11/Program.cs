@@ -1,22 +1,34 @@
-﻿// 12. Напишите программу, которая будет принимать на
-// вход два числа и выводить, является ли второе число
-// кратным первому. Если число 2 не кратно числу 1, то
-// программа выводит остаток от деления.
-// 34, 5 -> не кратно, остаток 4
-// 16, 4 -> кратно
+﻿// 11. Напишите программу, которая выводит случайное
+// трёхзначное число и удаляет вторую цифру этого
+// числа.
+// 456 -> 46
+// 782 -> 72
+// 918 -> 98
 
-Console.Write("Введите первое целое число: ");
-int firstNumber = Convert.ToInt32 (Console.ReadLine());
+int number = new Random().Next(100, 1000);
+Console.WriteLine($"Случайное трехзначное число - {number}.");
 
-Console.Write("Введите второе целое число: ");
-int secondNumber = Convert.ToInt32 (Console.ReadLine());
+// !!!!! Невнимательно прочитала условия задачи и нашла вторую цифру числа. Пусть будет. 
+//
+//
+//int SecondDigit(int num)
+// {
+//     int firstDigit = num / 100;
+//     int thirdDigit = num % 10;
+//     int secondDigit = (num - (firstDigit * 100) - thirdDigit) / 10;
+//     return secondDigit;
+// }
 
-int check = firstNumber % secondNumber;
-if (check > 0)
+// int second = SecondDigit(number);
+// Console.WriteLine($"Вторая цифра числа {number} - {second}.");
+
+int NoSecondDigit(int num)
 {
-    Console.WriteLine($"Не кратно. Остаток {check}");
+    int firstDigit = num / 100;
+    int thirdDigit = num % 10;
+    int result = firstDigit * 10 + thirdDigit;
+    return result;
 }
-else
-{
-    Console.WriteLine("Кратно");
-}
+
+int res = NoSecondDigit(number);
+Console.WriteLine(res);
