@@ -8,7 +8,10 @@
 int number = new Random().Next(100, 1000);
 Console.WriteLine($"Случайное трехзначное число - {number}.");
 
-// int SecondDigit(int num)
+// !!!!! Невнимательно прочитала условия задачи и нашла вторую цифру числа. Пусть будет. 
+//
+//
+//int SecondDigit(int num)
 // {
 //     int firstDigit = num / 100;
 //     int thirdDigit = num % 10;
