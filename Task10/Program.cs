@@ -14,7 +14,7 @@ int SecondDigit(int num)
 {
     int firstDigit = num / 100;
     int thirdDigit = num % 10;
-    int secondDigit = (num - (firstDigit * 100) - thirdDigit) / 10;
+    int secondDigit = (num - (firstDigit * 100) - thirdDigit) / 10; //secondDigit = num / 10 % 10;
     return secondDigit;
 }
 
