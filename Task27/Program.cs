@@ -9,12 +9,11 @@ int number = Convert.ToInt32(Console.ReadLine());
 int SumDigits(int num)
 {
     int sum = default;
-    while (num > 9) // >=9 - почему программа работает корректно?
+    while (num > 0)
     {
         sum = sum + num % 10;
         num = num / 10;
     }
-    sum = sum + num;
     return sum;
 }
 
