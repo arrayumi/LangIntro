@@ -13,10 +13,15 @@ int PositiveIntCounter (int [] array)
     return counter;
 }
 
-Console.Write("Введите количество чисел, которые хотите ввести: ");
-int num = Convert.ToInt32(Console.ReadLine());
-Console.Write($"Введите {num} чисел через пробел: ");
+// Console.Write("Введите количество чисел, которые хотите ввести: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Console.Write($"Введите {num} чисел через пробел: ");
 
-int [] arr = new int [num];
-arr = Console.ReadLine().Split(" ", num).Select(int.Parse).ToArray();
+// int [] arr = new int [num];
+// arr = Console.ReadLine().Split(" ", num).Select(int.Parse).ToArray();
+// Console.WriteLine ($"Введено {PositiveIntCounter(arr)} чисел больше 0.");
+
+
+Console.Write("Введите числа: ");
+int [] arr = Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
 Console.WriteLine ($"Введено {PositiveIntCounter(arr)} чисел больше 0.");
