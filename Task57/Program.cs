@@ -91,6 +91,19 @@ int[,] ValueCounterMatrix(int[] array)
     return matrix;
 }
 
+void PrintMatrix2(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j]} повторяется ");
+            else Console.Write($"{matrix[i, j]} раз");
+        }
+        Console.WriteLine();
+    }
+}
+
 int[,] array2D = CreateMatrixRndInt(3, 4, 1, 10);
 PrintMatrix(array2D);
 Console.WriteLine();
@@ -104,4 +117,4 @@ PrintArray(arr);
 Console.WriteLine();
 
 int[,] valueCounterMatrix = ValueCounterMatrix(arr);
-PrintMatrix(valueCounterMatrix);
+PrintMatrix2(valueCounterMatrix);
