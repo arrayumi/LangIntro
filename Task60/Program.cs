@@ -70,8 +70,12 @@ int[] arr = NotRepeatedNumbers(90, 10, 99);
 
 // т.к. у нас в массиве должны быть двузначные неповторяющиеся числа, то
 // произведение всех измерений должно быть не больше 90, чтобы условие выполнялось.
-// здесь должна быть корректная проверка, которую сделать не получилось
+// было принято решение вынести измерения в отдельные переменные, чтобы произвести проверку
 
-int[,,] arr3D = CreateArray3DRndInt(5, 3, 3, arr);
-if (arr3D.GetLength(0) * arr3D.GetLength(1) * arr3D.GetLength(2) < 90) PrintArray3D(arr3D);
+int rowsArr3D = 5, columnsArr3D = 3, depthArr3D = 3;
+if (rowsArr3D * columnsArr3D * columnsArr3D < 90)
+{
+    int[,,] arr3D = CreateArray3DRndInt(rowsArr3D, columnsArr3D, depthArr3D, arr);
+    PrintArray3D(arr3D);
+}
 else Console.WriteLine("Массив слишком большой, невозможно его заполнить неповторяющимися числами");
