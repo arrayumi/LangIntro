@@ -12,7 +12,7 @@ int n = Convert.ToInt32(Console.ReadLine());
 int Ackermann(int numM, int numN)
 {
     if (numM == 0) return numN + 1;
-    else if (numM > 0 && numN == 0) return Ackermann(numM - 1, 1);
+    if (numM > 0 && numN == 0) return Ackermann(numM - 1, 1);
     return Ackermann (numM-1, Ackermann(numM, numN-1));
 }
 
