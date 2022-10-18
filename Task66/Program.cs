@@ -14,6 +14,6 @@ int SumNumbers(int numM, int numN)
     return 0;
 }
 
-if (m < n) Console.Write($"{SumNumbers(m, n)}");
-else if (m > n) Console.Write($"{SumNumbers(n, m)}");
+if (m < n) Console.Write(SumNumbers(m, n));
+else if (m > n) Console.Write(SumNumbers(n, m));
 else Console.Write("0");
