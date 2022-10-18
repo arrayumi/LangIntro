@@ -16,7 +16,7 @@ void NaturalNumbers2(int num)
 {
     if (num==0) return;
     Console.Write ($"{num} ");
-    NaturalNumbers(num - 1);
+    NaturalNumbers2(num - 1);
 }
 
 NaturalNumbers(n);
